@@ -52,6 +52,8 @@ public class String_To_Mutiple_Lines {
 			//It tests if the Word that's just been added to the ShortMsg is a new line character and if it is it sets BP to true.
             if (ContAry[P].contains("\n")) {
                 Bp = true;
+                ShortMsg += ContAry[P].replace("\n", "");
+                Words++;
             }
 			//test if the ShortMsg is shorter than the maximum width or if BP is true.
             if (Fnt.getStringBounds(ShortMsg, FRC).getWidth() >= W || Bp) {
